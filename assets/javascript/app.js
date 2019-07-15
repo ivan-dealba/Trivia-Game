@@ -1,5 +1,5 @@
-var gameStart = true;
+// var gameStart = true;
 
-if (gameStart === true){
-    $('#main-content').text("test");
-}
+// if (gameStart === true){
+//     $('#main-content').text("test");
+// }
