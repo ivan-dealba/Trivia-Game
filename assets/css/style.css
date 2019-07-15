@@ -1,4 +1,15 @@
 section {
     background-color:beige;
+}
+
+#trivia-title {
+    padding: 30px;
+}
+
+#time-remaining {
+    padding: 20px;
+}
+
+#answer-choices {
     padding: 20px;
 }
