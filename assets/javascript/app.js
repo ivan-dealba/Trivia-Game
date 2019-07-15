@@ -1,5 +1,5 @@
-var gameStart = false;
+var gameStart = true;
 
 if (gameStart === true){
-    alert("new game");
+    $('#main-content').text("test");
 }
