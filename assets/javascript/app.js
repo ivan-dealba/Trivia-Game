@@ -126,7 +126,10 @@ let randomQuestion = 0;
 let intervalId;
 
 // Variable will be decremented for each question
-let number = 30
+let number = 30;
+
+//
+let imageAnswer = 0;
 
 // Function that will decrement our timer
 function run(){
@@ -143,6 +146,12 @@ function decrement(){
         stop();
         alert('Time is up!');
         $('#answer-choices').text(`The answer is ${questionsArr[0].question.correct}.`);
+
+        $(questionImage).remove();
+        $(questionImage).attr('src', `assets/images/${imageAnswer}.jpeg`);
+        imageAnswer++;
+        $('#current-image').append(questionImage);
+
         questionsArr.splice(0,1);
         totalWrong++;
         number = 30;
@@ -184,6 +193,11 @@ function triviaQuestions(){
             alert('Correct');
             $('#answer-choices').text('Please click Next Question to proceed.');
             questionsArr.splice(0,1);
+
+            $(questionImage).remove();
+            $(questionImage).attr('src', `assets/images/${imageAnswer}.jpeg`);
+            imageAnswer++;
+            $('#current-image').append(questionImage);
         })
 
         $(answerTwo).on('click', function(){
@@ -191,6 +205,11 @@ function triviaQuestions(){
             alert('Wrong');
             $('#answer-choices').text(`The answer is ${questionsArr[0].question.correct}.`);
             questionsArr.splice(0,1);
+
+            $(questionImage).remove();
+            $(questionImage).attr('src', `assets/images/${imageAnswer}.jpeg`);
+            imageAnswer++;
+            $('#current-image').append(questionImage);
         })
 
         $(answerThree).on('click', function(){
@@ -198,6 +217,11 @@ function triviaQuestions(){
             alert('Wrong');
             $('#answer-choices').text(`The answer is ${questionsArr[0].question.correct}.`);
             questionsArr.splice(0,1);
+
+            $(questionImage).remove();
+            $(questionImage).attr('src', `assets/images/${imageAnswer}.jpeg`);
+            imageAnswer++;
+            $('#current-image').append(questionImage);
         })
 
         $(answerFour).on('click', function(){
@@ -205,6 +229,11 @@ function triviaQuestions(){
             alert('Wrong');
             $('#answer-choices').text(`The answer is ${questionsArr[0].question.correct}.`);
             questionsArr.splice(0,1);
+
+            $(questionImage).remove();
+            $(questionImage).attr('src', `assets/images/${imageAnswer}.jpeg`);
+            imageAnswer++;
+            $('#current-image').append(questionImage);
         })
 
     } else if(randomQuestion === 1){
@@ -234,6 +263,11 @@ function triviaQuestions(){
             alert('Correct');
             $('#answer-choices').text('Please click Next Question to proceed.');
             questionsArr.splice(0,1);
+
+            $(questionImage).remove();
+            $(questionImage).attr('src', `assets/images/${imageAnswer}.jpeg`);
+            imageAnswer++;
+            $('#current-image').append(questionImage);
         })
 
         $(answerTwo).on('click', function(){
@@ -241,6 +275,11 @@ function triviaQuestions(){
             alert('Wrong');
             $('#answer-choices').text(`The answer is ${questionsArr[0].question.correct}.`);
             questionsArr.splice(0,1);
+
+            $(questionImage).remove();
+            $(questionImage).attr('src', `assets/images/${imageAnswer}.jpeg`);
+            imageAnswer++;
+            $('#current-image').append(questionImage);
         })
 
         $(answerThree).on('click', function(){
@@ -248,6 +287,11 @@ function triviaQuestions(){
             alert('Wrong');
             $('#answer-choices').text(`The answer is ${questionsArr[0].question.correct}.`);
             questionsArr.splice(0,1);
+
+            $(questionImage).remove();
+            $(questionImage).attr('src', `assets/images/${imageAnswer}.jpeg`);
+            imageAnswer++;
+            $('#current-image').append(questionImage);
         })
 
         $(answerFour).on('click', function(){
@@ -255,6 +299,11 @@ function triviaQuestions(){
             alert('Wrong');
             $('#answer-choices').text(`The answer is ${questionsArr[0].question.correct}.`);
             questionsArr.splice(0,1);
+
+            $(questionImage).remove();
+            $(questionImage).attr('src', `assets/images/${imageAnswer}.jpeg`);
+            imageAnswer++;
+            $('#current-image').append(questionImage);
         })
 
     } else if(randomQuestion === 2){
@@ -284,6 +333,11 @@ function triviaQuestions(){
             alert('Correct');
             $('#answer-choices').text('Please click Next Question to proceed.');
             questionsArr.splice(0,1);
+
+            $(questionImage).remove();
+            $(questionImage).attr('src', `assets/images/${imageAnswer}.jpeg`);
+            imageAnswer++;
+            $('#current-image').append(questionImage);
         })
 
         $(answerTwo).on('click', function(){
@@ -291,6 +345,11 @@ function triviaQuestions(){
             alert('Wrong');
             $('#answer-choices').text(`The answer is ${questionsArr[0].question.correct}.`);
             questionsArr.splice(0,1);
+
+            $(questionImage).remove();
+            $(questionImage).attr('src', `assets/images/${imageAnswer}.jpeg`);
+            imageAnswer++;
+            $('#current-image').append(questionImage);
         })
 
         $(answerThree).on('click', function(){
@@ -298,6 +357,11 @@ function triviaQuestions(){
             alert('Wrong');
             $('#answer-choices').text(`The answer is ${questionsArr[0].question.correct}.`);
             questionsArr.splice(0,1);
+
+            $(questionImage).remove();
+            $(questionImage).attr('src', `assets/images/${imageAnswer}.jpeg`);
+            imageAnswer++;
+            $('#current-image').append(questionImage);
         })
 
         $(answerFour).on('click', function(){
@@ -305,6 +369,11 @@ function triviaQuestions(){
             alert('Wrong');
             $('#answer-choices').text(`The answer is ${questionsArr[0].question.correct}.`);
             questionsArr.splice(0,1);
+
+            $(questionImage).remove();
+            $(questionImage).attr('src', `assets/images/${imageAnswer}.jpeg`);
+            imageAnswer++;
+            $('#current-image').append(questionImage);
         })
 
     } else if(randomQuestion === 3){
@@ -334,6 +403,11 @@ function triviaQuestions(){
             alert('Correct');
             $('#answer-choices').text('Please click Next Question to proceed.');
             questionsArr.splice(0,1);
+
+            $(questionImage).remove();
+            $(questionImage).attr('src', `assets/images/${imageAnswer}.jpeg`);
+            imageAnswer++;
+            $('#current-image').append(questionImage);
         })
 
         $(answerTwo).on('click', function(){
@@ -341,6 +415,11 @@ function triviaQuestions(){
             alert('Wrong');
             $('#answer-choices').text(`The answer is ${questionsArr[0].question.correct}.`);
             questionsArr.splice(0,1);
+
+            $(questionImage).remove();
+            $(questionImage).attr('src', `assets/images/${imageAnswer}.jpeg`);
+            imageAnswer++;
+            $('#current-image').append(questionImage);
         })
 
         $(answerThree).on('click', function(){
@@ -348,6 +427,11 @@ function triviaQuestions(){
             alert('Wrong');
             $('#answer-choices').text(`The answer is ${questionsArr[0].question.correct}.`);
             questionsArr.splice(0,1);
+
+            $(questionImage).remove();
+            $(questionImage).attr('src', `assets/images/${imageAnswer}.jpeg`);
+            imageAnswer++;
+            $('#current-image').append(questionImage);
         })
 
         $(answerFour).on('click', function(){
@@ -355,6 +439,11 @@ function triviaQuestions(){
             alert('Wrong');
             $('#answer-choices').text(`The answer is ${questionsArr[0].question.correct}.`);
             questionsArr.splice(0,1);
+
+            $(questionImage).remove();
+            $(questionImage).attr('src', `assets/images/${imageAnswer}.jpeg`);
+            imageAnswer++;
+            $('#current-image').append(questionImage);
         })
 
     } else if(randomQuestion === 4){
@@ -383,6 +472,11 @@ function triviaQuestions(){
             alert('Correct');
             $('#answer-choices').text('Please click Next Question to proceed.');
             questionsArr.splice(0,1);
+
+            $(questionImage).remove();
+            $(questionImage).attr('src', `assets/images/${imageAnswer}.jpeg`);
+            imageAnswer++;
+            $('#current-image').append(questionImage);
         })
 
         $(answerTwo).on('click', function(){
@@ -390,6 +484,11 @@ function triviaQuestions(){
             alert('Wrong');
             $('#answer-choices').text(`The answer is ${questionsArr[0].question.correct}.`);
             questionsArr.splice(0,1);
+
+            $(questionImage).remove();
+            $(questionImage).attr('src', `assets/images/${imageAnswer}.jpeg`);
+            imageAnswer++;
+            $('#current-image').append(questionImage);
         })
 
         $(answerThree).on('click', function(){
@@ -397,6 +496,11 @@ function triviaQuestions(){
             alert('Wrong');
             $('#answer-choices').text(`The answer is ${questionsArr[0].question.correct}.`);
             questionsArr.splice(0,1);
+
+            $(questionImage).remove();
+            $(questionImage).attr('src', `assets/images/${imageAnswer}.jpeg`);
+            imageAnswer++;
+            $('#current-image').append(questionImage);
         })
 
         $(answerFour).on('click', function(){
@@ -404,11 +508,21 @@ function triviaQuestions(){
             alert('Wrong');
             $('#answer-choices').text(`The answer is ${questionsArr[0].question.correct}.`);
             questionsArr.splice(0,1);
+
+            $(questionImage).remove();
+            $(questionImage).attr('src', `assets/images/${imageAnswer}.jpeg`);
+            imageAnswer++;
+            $('#current-image').append(questionImage);
         })
     } else if(randomQuestion === 5){
         $('#main-content').append(`Total correct: ${totalCorrect}`);
         $('#main-content').append('<br>');
         $('#main-content').append(`Total wrong: ${totalWrong}`);
+
+        $(questionImage).remove();
+        $(questionImage).attr('src', `assets/images/thank-you.jpeg`);
+        imageAnswer = 0;
+        $('#current-image').append(questionImage);
 
         randomQuestion = 0;
         gameStart = true;
