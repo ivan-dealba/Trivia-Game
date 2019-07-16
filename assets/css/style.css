@@ -5,10 +5,13 @@ body {
 section {
     background-color:rgb(221, 197, 204);
     margin-top: 40px;
+    border: rgb(190, 94, 110) solid 10px;
 }
 
 #trivia-title {
-    padding: 30px;
+    padding: 20px;
+    color: rgba(92, 13, 43, 0.822);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 #time-remaining {
