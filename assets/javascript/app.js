@@ -661,9 +661,13 @@ function triviaQuestions(){
     } else if(randomQuestion === 5){
         stop();
         $('#time-remaining').remove();
-        $('#main-content').append(`Total correct: ${totalCorrect}`);
-        $('#main-content').append('<br>');
-        $('#main-content').append(`Total wrong: ${totalWrong}`);
+        // $('#wins-losses').append(`Total correct: ${totalCorrect}`);
+        // $('#wins-losses').append('<br>');
+        // $('#wins-losses').append(`Total wrong: ${totalWrong}`);
+
+        $('#wins-losses').html(`<h3>Total correct: ${totalCorrect}</h3>
+                                <h3>Total wrong: ${totalWrong}</h3>`);
+
 
         $(questionImage).remove();
         $(questionImage).attr('src', `assets/images/thank-you.jpeg`);
