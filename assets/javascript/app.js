@@ -205,7 +205,9 @@ function triviaQuestions(){
             $(questionImage).remove();
             $(questionImage).attr('src', `assets/images/${imageAnswer}.jpeg`);
             imageAnswer++;
-            $('#current-image').append(questionImage);
+            // $('#current-image').append(questionImage);
+            $('#answer-image').append(questionImage);
+
 
             stop();
             timerCountdown = 10;
@@ -222,7 +224,9 @@ function triviaQuestions(){
             $(questionImage).remove();
             $(questionImage).attr('src', `assets/images/${imageAnswer}.jpeg`);
             imageAnswer++;
-            $('#current-image').append(questionImage);
+            // $('#current-image').append(questionImage);
+            $('#answer-image').append(questionImage);
+
 
             stop();
             timerCountdown = 10;
@@ -238,7 +242,9 @@ function triviaQuestions(){
             $(questionImage).remove();
             $(questionImage).attr('src', `assets/images/${imageAnswer}.jpeg`);
             imageAnswer++;
-            $('#current-image').append(questionImage);
+            // $('#current-image').append(questionImage);
+            $('#answer-image').append(questionImage);
+
 
             stop();
             timerCountdown = 10;
@@ -254,7 +260,9 @@ function triviaQuestions(){
             $(questionImage).remove();
             $(questionImage).attr('src', `assets/images/${imageAnswer}.jpeg`);
             imageAnswer++;
-            $('#current-image').append(questionImage);
+            // $('#current-image').append(questionImage);
+            $('#answer-image').append(questionImage);
+
 
             stop();
             timerCountdown = 10;
@@ -293,7 +301,9 @@ function triviaQuestions(){
             $(questionImage).remove();
             $(questionImage).attr('src', `assets/images/${imageAnswer}.jpeg`);
             imageAnswer++;
-            $('#current-image').append(questionImage);
+            // $('#current-image').append(questionImage); 
+            $('#answer-image').append(questionImage);
+
 
             stop();
             timerCountdown = 10;
@@ -310,7 +320,9 @@ function triviaQuestions(){
             $(questionImage).remove();
             $(questionImage).attr('src', `assets/images/${imageAnswer}.jpeg`);
             imageAnswer++;
-            $('#current-image').append(questionImage);
+            // $('#current-image').append(questionImage);
+            $('#answer-image').append(questionImage);
+
 
             stop();
             timerCountdown = 10;
@@ -327,7 +339,9 @@ function triviaQuestions(){
             $(questionImage).remove();
             $(questionImage).attr('src', `assets/images/${imageAnswer}.jpeg`);
             imageAnswer++;
-            $('#current-image').append(questionImage);
+            // $('#current-image').append(questionImage);
+            $('#answer-image').append(questionImage);
+
 
             stop();
             timerCountdown = 10;
@@ -344,7 +358,9 @@ function triviaQuestions(){
             $(questionImage).remove();
             $(questionImage).attr('src', `assets/images/${imageAnswer}.jpeg`);
             imageAnswer++;
-            $('#current-image').append(questionImage);
+            // $('#current-image').append(questionImage);
+            $('#answer-image').append(questionImage);
+
 
             stop();
             timerCountdown = 10;
@@ -383,7 +399,9 @@ function triviaQuestions(){
             $(questionImage).remove();
             $(questionImage).attr('src', `assets/images/${imageAnswer}.jpeg`);
             imageAnswer++;
-            $('#current-image').append(questionImage);
+            // $('#current-image').append(questionImage);
+            $('#answer-image').append(questionImage);
+
 
             stop();
             timerCountdown = 10;
@@ -400,7 +418,9 @@ function triviaQuestions(){
             $(questionImage).remove();
             $(questionImage).attr('src', `assets/images/${imageAnswer}.jpeg`);
             imageAnswer++;
-            $('#current-image').append(questionImage);
+            // $('#current-image').append(questionImage);
+            $('#answer-image').append(questionImage);
+
 
             stop();
             timerCountdown = 10;
@@ -417,7 +437,9 @@ function triviaQuestions(){
             $(questionImage).remove();
             $(questionImage).attr('src', `assets/images/${imageAnswer}.jpeg`);
             imageAnswer++;
-            $('#current-image').append(questionImage);
+            // $('#current-image').append(questionImage);
+            $('#answer-image').append(questionImage);
+
 
             stop();
             timerCountdown = 10;
@@ -434,7 +456,9 @@ function triviaQuestions(){
             $(questionImage).remove();
             $(questionImage).attr('src', `assets/images/${imageAnswer}.jpeg`);
             imageAnswer++;
-            $('#current-image').append(questionImage);
+            // $('#current-image').append(questionImage);
+            $('#answer-image').append(questionImage);
+
 
             stop();
             timerCountdown = 10;
@@ -473,7 +497,9 @@ function triviaQuestions(){
             $(questionImage).remove();
             $(questionImage).attr('src', `assets/images/${imageAnswer}.jpeg`);
             imageAnswer++;
-            $('#current-image').append(questionImage);
+            // $('#current-image').append(questionImage);
+            $('#answer-image').append(questionImage);
+
 
             stop();
             timerCountdown = 10;
@@ -490,7 +516,9 @@ function triviaQuestions(){
             $(questionImage).remove();
             $(questionImage).attr('src', `assets/images/${imageAnswer}.jpeg`);
             imageAnswer++;
-            $('#current-image').append(questionImage);
+            // $('#current-image').append(questionImage);
+            $('#answer-image').append(questionImage);
+
 
             stop();
             timerCountdown = 10;
@@ -507,7 +535,9 @@ function triviaQuestions(){
             $(questionImage).remove();
             $(questionImage).attr('src', `assets/images/${imageAnswer}.jpeg`);
             imageAnswer++;
-            $('#current-image').append(questionImage);
+            // $('#current-image').append(questionImage);
+            $('#answer-image').append(questionImage);
+
 
             stop();
             timerCountdown = 10;
@@ -524,7 +554,9 @@ function triviaQuestions(){
             $(questionImage).remove();
             $(questionImage).attr('src', `assets/images/${imageAnswer}.jpeg`);
             imageAnswer++;
-            $('#current-image').append(questionImage);
+            // $('#current-image').append(questionImage);
+            $('#answer-image').append(questionImage);
+
 
             stop();
             timerCountdown = 10;
@@ -562,7 +594,9 @@ function triviaQuestions(){
             $(questionImage).remove();
             $(questionImage).attr('src', `assets/images/${imageAnswer}.jpeg`);
             imageAnswer++;
-            $('#current-image').append(questionImage);
+            // $('#current-image').append(questionImage);
+            $('#answer-image').append(questionImage);
+
 
             stop();
             timerCountdown = 10;
@@ -579,7 +613,9 @@ function triviaQuestions(){
             $(questionImage).remove();
             $(questionImage).attr('src', `assets/images/${imageAnswer}.jpeg`);
             imageAnswer++;
-            $('#current-image').append(questionImage);
+            // $('#current-image').append(questionImage);
+            $('#answer-image').append(questionImage);
+
 
             stop();
             timerCountdown = 10;
@@ -596,7 +632,9 @@ function triviaQuestions(){
             $(questionImage).remove();
             $(questionImage).attr('src', `assets/images/${imageAnswer}.jpeg`);
             imageAnswer++;
-            $('#current-image').append(questionImage);
+            // $('#current-image').append(questionImage);
+            $('#answer-image').append(questionImage);
+
 
             stop();
             timerCountdown = 10;
@@ -613,7 +651,9 @@ function triviaQuestions(){
             $(questionImage).remove();
             $(questionImage).attr('src', `assets/images/${imageAnswer}.jpeg`);
             imageAnswer++;
-            $('#current-image').append(questionImage);
+            // $('#current-image').append(questionImage);
+            $('#answer-image').append(questionImage);
+
 
             stop();
             timerCountdown = 10;
@@ -628,7 +668,9 @@ function triviaQuestions(){
         $(questionImage).remove();
         $(questionImage).attr('src', `assets/images/thank-you.jpeg`);
         imageAnswer = 0;
-        $('#current-image').append(questionImage);
+        // $('#current-image').append(questionImage);
+        $('#answer-image').append(questionImage);
+
 
         $('#game-button').html(restartGame);
     }
