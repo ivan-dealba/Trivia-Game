@@ -21,3 +21,16 @@ section {
 #answer-choices {
     padding: 20px;
 }
+
+#welcome-image {
+    border: rgb(190, 94, 110) solid 10px;
+    width: auto;
+    height: auto;
+}
+
+/* For desktop: */
+@media only screen and (min-width: 480px){
+    #welcome-image {
+        width: 50%;
+    }
+}

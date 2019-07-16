@@ -8,6 +8,11 @@ clickToStart.css('padding', '20px');
 clickToStart.css('margin', '20px');
 clickToStart.attr('id', 'button-start');
 
+// Image on game start page
+let welcomeImage = $('<img>');
+welcomeImage.attr('src', 'assets/images/main-page.jpeg')
+welcomeImage.attr('id', 'welcome-image');
+
 // Button to proceed to next question
 let nextQuestion = $('<button>');
 nextQuestion.text('Next Question');
@@ -79,8 +84,6 @@ function newGame(){
         $('#answer-reveal').text('');
         $('#answer-image').text('');
         $('#game-button').append(clickToStart);
-        let welcomeImage = $('<img>');
-        welcomeImage.attr('src', 'assets/images/main-page.jpeg')
         $('#trivia-title').append(welcomeImage);
     } else{
         // start questions
