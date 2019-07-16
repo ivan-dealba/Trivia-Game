@@ -79,6 +79,9 @@ function newGame(){
         $('#answer-reveal').text('');
         $('#answer-image').text('');
         $('#game-button').append(clickToStart);
+        let welcomeImage = $('<img>');
+        welcomeImage.attr('src', 'assets/images/main-page.jpeg')
+        $('#trivia-title').append(welcomeImage);
     } else{
         // start questions
         // call function for executing trivia questions
