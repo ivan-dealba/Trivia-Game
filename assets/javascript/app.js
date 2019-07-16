@@ -178,6 +178,9 @@ function triviaQuestions(){
 
     } else if(randomQuestion === 1){
         $('#current-question').text(questionTwo);
+        $(questionImage).remove();
+        $(questionImage).attr('src', 'assets/images/agumon.png');
+        $('#current-image').append(questionImage);
 
         let answerOne = $('<button>');
         let answerTwo = $('<button>');
@@ -223,6 +226,9 @@ function triviaQuestions(){
 
     } else if(randomQuestion === 2){
         $('#current-question').text(questionThree);
+        $(questionImage).remove();
+        $(questionImage).attr('src', 'assets/images/naruto.jpeg');
+        $('#current-image').append(questionImage);
 
         let answerOne = $('<button>');
         let answerTwo = $('<button>');
@@ -268,6 +274,9 @@ function triviaQuestions(){
 
     } else if(randomQuestion === 3){
         $('#current-question').text(questionFour);
+        $(questionImage).remove();
+        $(questionImage).attr('src', 'assets/images/agumon.png');
+        $('#current-image').append(questionImage);
 
         let answerOne = $('<button>');
         let answerTwo = $('<button>');
@@ -313,6 +322,9 @@ function triviaQuestions(){
 
     } else if(randomQuestion === 4){
         $('#current-question').text(questionFive);
+        $(questionImage).remove();
+        $(questionImage).attr('src', 'assets/images/agumon.png');
+        $('#current-image').append(questionImage);
 
         let answerOne = $('<button>');
         let answerTwo = $('<button>');
