@@ -132,7 +132,7 @@ let randomQuestion = 0;
 let intervalId;
 
 // Variable will be decremented for each question
-let number = 30;
+let timerCountdown = 10;
 
 //
 let imageAnswer = 0;
@@ -144,11 +144,11 @@ function run(){
 }
 
 function decrement(){
-    number--;
-    $('#time-remaining').html(`<h3>Time remaining: ${number}</h3>`);
+    timerCountdown--;
+    $('#time-remaining').html(`<h3>Time remaining: ${timerCountdown}</h3>`);
 
 
-    if(number === 0){
+    if(timerCountdown === 0){
         stop();
         alert('Time is up!');
         $('#answer-choices').text(`The answer is ${questionsArr[0].question.correct}.`);
@@ -160,7 +160,7 @@ function decrement(){
 
         questionsArr.splice(0,1);
         totalWrong++;
-        number = 30;
+        timerCountdown = 10;
     }
 }
 
@@ -208,7 +208,7 @@ function triviaQuestions(){
             $('#current-image').append(questionImage);
 
             stop();
-            number = 30;
+            timerCountdown = 10;
         })
 
         $(answerTwo).on('click', function(){
@@ -225,7 +225,7 @@ function triviaQuestions(){
             $('#current-image').append(questionImage);
 
             stop();
-            number = 30;
+            timerCountdown = 10;
         })
 
         $(answerThree).on('click', function(){
@@ -241,7 +241,7 @@ function triviaQuestions(){
             $('#current-image').append(questionImage);
 
             stop();
-            number = 30;
+            timerCountdown = 10;
         })
 
         $(answerFour).on('click', function(){
@@ -257,7 +257,7 @@ function triviaQuestions(){
             $('#current-image').append(questionImage);
 
             stop();
-            number = 30;
+            timerCountdown = 10;
         })
         
     } else if(randomQuestion === 1){
@@ -296,7 +296,7 @@ function triviaQuestions(){
             $('#current-image').append(questionImage);
 
             stop();
-            number = 30;
+            timerCountdown = 10;
         })
 
         $(answerTwo).on('click', function(){
@@ -313,7 +313,7 @@ function triviaQuestions(){
             $('#current-image').append(questionImage);
 
             stop();
-            number = 30;
+            timerCountdown = 10;
         })
 
         $(answerThree).on('click', function(){
@@ -330,7 +330,7 @@ function triviaQuestions(){
             $('#current-image').append(questionImage);
 
             stop();
-            number = 30;
+            timerCountdown = 10;
         })
 
         $(answerFour).on('click', function(){
@@ -347,7 +347,7 @@ function triviaQuestions(){
             $('#current-image').append(questionImage);
 
             stop();
-            number = 30;
+            timerCountdown = 10;
         })
 
     } else if(randomQuestion === 2){
@@ -386,7 +386,7 @@ function triviaQuestions(){
             $('#current-image').append(questionImage);
 
             stop();
-            number = 30;
+            timerCountdown = 10;
         })
 
         $(answerTwo).on('click', function(){
@@ -403,7 +403,7 @@ function triviaQuestions(){
             $('#current-image').append(questionImage);
 
             stop();
-            number = 30;
+            timerCountdown = 10;
         })
 
         $(answerThree).on('click', function(){
@@ -420,7 +420,7 @@ function triviaQuestions(){
             $('#current-image').append(questionImage);
 
             stop();
-            number = 30;
+            timerCountdown = 10;
         })
 
         $(answerFour).on('click', function(){
@@ -437,7 +437,7 @@ function triviaQuestions(){
             $('#current-image').append(questionImage);
 
             stop();
-            number = 30;
+            timerCountdown = 10;
         })
 
     } else if(randomQuestion === 3){
@@ -476,7 +476,7 @@ function triviaQuestions(){
             $('#current-image').append(questionImage);
 
             stop();
-            number = 30;
+            timerCountdown = 10;
         })
 
         $(answerTwo).on('click', function(){
@@ -493,7 +493,7 @@ function triviaQuestions(){
             $('#current-image').append(questionImage);
 
             stop();
-            number = 30;
+            timerCountdown = 10;
         })
 
         $(answerThree).on('click', function(){
@@ -510,7 +510,7 @@ function triviaQuestions(){
             $('#current-image').append(questionImage);
 
             stop();
-            number = 30;
+            timerCountdown = 10;
         })
 
         $(answerFour).on('click', function(){
@@ -527,7 +527,7 @@ function triviaQuestions(){
             $('#current-image').append(questionImage);
 
             stop();
-            number = 30;
+            timerCountdown = 10;
         })
 
     } else if(randomQuestion === 4){
@@ -565,7 +565,7 @@ function triviaQuestions(){
             $('#current-image').append(questionImage);
 
             stop();
-            number = 30;
+            timerCountdown = 10;
         })
 
         $(answerTwo).on('click', function(){
@@ -582,7 +582,7 @@ function triviaQuestions(){
             $('#current-image').append(questionImage);
 
             stop();
-            number = 30;
+            timerCountdown = 10;
         })
 
         $(answerThree).on('click', function(){
@@ -599,7 +599,7 @@ function triviaQuestions(){
             $('#current-image').append(questionImage);
 
             stop();
-            number = 30;
+            timerCountdown = 10;
         })
 
         $(answerFour).on('click', function(){
@@ -616,7 +616,7 @@ function triviaQuestions(){
             $('#current-image').append(questionImage);
 
             stop();
-            number = 30;
+            timerCountdown = 10;
         })
     } else if(randomQuestion === 5){
         stop();
