@@ -76,6 +76,8 @@ function newGame(){
         $('#time-remaining').text('');
         $('#current-question').text('');
         $('#answer-choices').text('');
+        $('#answer-reveal').text('');
+        $('#answer-image').text('');
         $('#game-button').append(clickToStart);
     } else{
         // start questions
