@@ -35,6 +35,13 @@ section {
     font-weight: bold;
 }
 
+#button-next {
+    color: rgba(92, 13, 43, 0.822);
+    background-color: rgb(201, 169, 177);
+    border: rgb(190, 94, 110) solid 2px;
+    font-weight: bold;
+}
+
 /* For desktop: */
 @media only screen and (min-width: 480px){
     #welcome-image {

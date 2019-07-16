@@ -22,6 +22,7 @@ let nextQuestion = $('<button>');
 nextQuestion.text('Next Question');
 nextQuestion.css('padding', '20px');
 nextQuestion.css('margin', '20px');
+nextQuestion.attr('id', 'button-next');
 
 // Button to restart game
 let restartGame = $('<button>');
