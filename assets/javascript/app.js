@@ -90,9 +90,6 @@ function newGame(){
         $('#game-button').append(clickToStart);
         $('#trivia-title').append(welcomeImage);
     } else{
-        // start questions
-        // call function for executing trivia questions
-        $('#time-remaining').text("Time remaining:");
         $('#game-button').text('');
         $('#welcome-image').remove();
         $('#game-button').append(nextQuestion);
@@ -124,12 +121,45 @@ $(restartGame).on('click', function(){
 // Counter for current question
 let randomQuestion = 0;
 
+// Variable that will hold interval ID when we execute the run function
+let intervalId;
+
+// Variable will be decremented for each question
+let number = 30
+
+// Function that will decrement our timer
+function run(){
+    clearInterval(intervalId);
+    intervalId = setInterval(decrement, 1000);
+}
+
+function decrement(){
+    number--;
+    $('#time-remaining').html(`<h3>Time remaining: ${number}</h3>`);
+
+
+    if(number === 0){
+        stop();
+        alert('Time is up!');
+        $('#answer-choices').text(`The answer is ${questionsArr[0].question.correct}.`);
+        questionsArr.splice(0,1);
+        totalWrong++;
+        number = 30;
+    }
+}
+
+function stop(){
+    clearInterval(intervalId);
+}
+
 // Randomly choose a question and its answers to be displayed on the browser
 function triviaQuestions(){
 
     // let randomQuestion = Math.floor(Math.random() * questionsArr.length);
 
     if(randomQuestion === 0){
+        run();
+
         $('#current-question').text(questionOne);
         $(questionImage).attr('src', 'assets/images/gon.jpeg');
         $('#current-image').append(questionImage);
@@ -151,32 +181,34 @@ function triviaQuestions(){
         $(answerOne).on('click', function(){
             totalCorrect++;
             alert('Correct');
-            $('#answer-choices').text('');
+            $('#answer-choices').text('Please click Next Question to proceed.');
             questionsArr.splice(0,1);
         })
 
         $(answerTwo).on('click', function(){
             totalWrong++;
             alert('Wrong');
-            $('#answer-choices').text('');
+            $('#answer-choices').text(`The answer is ${questionsArr[0].question.correct}.`);
             questionsArr.splice(0,1);
         })
 
         $(answerThree).on('click', function(){
             totalWrong++;
             alert('Wrong');
-            $('#answer-choices').text('');
+            $('#answer-choices').text(`The answer is ${questionsArr[0].question.correct}.`);
             questionsArr.splice(0,1);
         })
 
         $(answerFour).on('click', function(){
             totalWrong++;
             alert('Wrong');
-            $('#answer-choices').text('');
+            $('#answer-choices').text(`The answer is ${questionsArr[0].question.correct}.`);
             questionsArr.splice(0,1);
         })
 
     } else if(randomQuestion === 1){
+        run();
+
         $('#current-question').text(questionTwo);
         $(questionImage).remove();
         $(questionImage).attr('src', 'assets/images/agumon.png');
@@ -199,32 +231,34 @@ function triviaQuestions(){
         $(answerOne).on('click', function(){
             totalCorrect++;
             alert('Correct');
-            $('#answer-choices').text('');
+            $('#answer-choices').text('Please click Next Question to proceed.');
             questionsArr.splice(0,1);
         })
 
         $(answerTwo).on('click', function(){
             totalWrong++;
             alert('Wrong');
-            $('#answer-choices').text('');
+            $('#answer-choices').text(`The answer is ${questionsArr[0].question.correct}.`);
             questionsArr.splice(0,1);
         })
 
         $(answerThree).on('click', function(){
             totalWrong++;
             alert('Wrong');
-            $('#answer-choices').text('');
+            $('#answer-choices').text(`The answer is ${questionsArr[0].question.correct}.`);
             questionsArr.splice(0,1);
         })
 
         $(answerFour).on('click', function(){
             totalWrong++;
             alert('Wrong');
-            $('#answer-choices').text('');
+            $('#answer-choices').text(`The answer is ${questionsArr[0].question.correct}.`);
             questionsArr.splice(0,1);
         })
 
     } else if(randomQuestion === 2){
+        run();
+
         $('#current-question').text(questionThree);
         $(questionImage).remove();
         $(questionImage).attr('src', 'assets/images/naruto.jpeg');
@@ -247,32 +281,34 @@ function triviaQuestions(){
         $(answerOne).on('click', function(){
             totalCorrect++;
             alert('Correct');
-            $('#answer-choices').text('');
+            $('#answer-choices').text('Please click Next Question to proceed.');
             questionsArr.splice(0,1);
         })
 
         $(answerTwo).on('click', function(){
             totalWrong++;
             alert('Wrong');
-            $('#answer-choices').text('');
+            $('#answer-choices').text(`The answer is ${questionsArr[0].question.correct}.`);
             questionsArr.splice(0,1);
         })
 
         $(answerThree).on('click', function(){
             totalWrong++;
             alert('Wrong');
-            $('#answer-choices').text('');
+            $('#answer-choices').text(`The answer is ${questionsArr[0].question.correct}.`);
             questionsArr.splice(0,1);
         })
 
         $(answerFour).on('click', function(){
             totalWrong++;
             alert('Wrong');
-            $('#answer-choices').text('');
+            $('#answer-choices').text(`The answer is ${questionsArr[0].question.correct}.`);
             questionsArr.splice(0,1);
         })
 
     } else if(randomQuestion === 3){
+        run();
+
         $('#current-question').text(questionFour);
         $(questionImage).remove();
         $(questionImage).attr('src', 'assets/images/blue-eyes.jpeg');
@@ -295,32 +331,34 @@ function triviaQuestions(){
         $(answerOne).on('click', function(){
             totalCorrect++;
             alert('Correct');
-            $('#answer-choices').text('');
+            $('#answer-choices').text('Please click Next Question to proceed.');
             questionsArr.splice(0,1);
         })
 
         $(answerTwo).on('click', function(){
             totalWrong++;
             alert('Wrong');
-            $('#answer-choices').text('');
+            $('#answer-choices').text(`The answer is ${questionsArr[0].question.correct}.`);
             questionsArr.splice(0,1);
         })
 
         $(answerThree).on('click', function(){
             totalWrong++;
             alert('Wrong');
-            $('#answer-choices').text('');
+            $('#answer-choices').text(`The answer is ${questionsArr[0].question.correct}.`);
             questionsArr.splice(0,1);
         })
 
         $(answerFour).on('click', function(){
             totalWrong++;
             alert('Wrong');
-            $('#answer-choices').text('');
+            $('#answer-choices').text(`The answer is ${questionsArr[0].question.correct}.`);
             questionsArr.splice(0,1);
         })
 
     } else if(randomQuestion === 4){
+        run();
+
         $('#current-question').text(questionFive);
         $(questionImage).remove();
         $(questionImage).attr('src', 'assets/images/avatar.png');
@@ -342,28 +380,28 @@ function triviaQuestions(){
         $(answerOne).on('click', function(){
             totalCorrect++;
             alert('Correct');
-            $('#answer-choices').text('');
+            $('#answer-choices').text('Please click Next Question to proceed.');
             questionsArr.splice(0,1);
         })
 
         $(answerTwo).on('click', function(){
             totalWrong++;
             alert('Wrong');
-            $('#answer-choices').text('');
+            $('#answer-choices').text(`The answer is ${questionsArr[0].question.correct}.`);
             questionsArr.splice(0,1);
         })
 
         $(answerThree).on('click', function(){
             totalWrong++;
             alert('Wrong');
-            $('#answer-choices').text('');
+            $('#answer-choices').text(`The answer is ${questionsArr[0].question.correct}.`);
             questionsArr.splice(0,1);
         })
 
         $(answerFour).on('click', function(){
             totalWrong++;
             alert('Wrong');
-            $('#answer-choices').text('');
+            $('#answer-choices').text(`The answer is ${questionsArr[0].question.correct}.`);
             questionsArr.splice(0,1);
         })
     } else if(randomQuestion === 5){
