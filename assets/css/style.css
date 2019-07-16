@@ -1,5 +1,10 @@
+body {
+    background-color: rgba(92, 13, 43, 0.822);
+}
+
 section {
-    background-color:beige;
+    background-color:rgb(221, 197, 204);
+    margin-top: 40px;
 }
 
 #trivia-title {
