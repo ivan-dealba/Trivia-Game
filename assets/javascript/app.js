@@ -88,7 +88,8 @@ function newGame(){
         $('#answer-choices').text('');
         $('#answer-reveal').text('');
         $('#answer-image').text('');
-        $('#game-button').append(clickToStart);
+        $('#game-button').html(clickToStart);
+
         $('#trivia-title').append(welcomeImage);
     } else{
         $('#game-button').text('');
@@ -103,6 +104,7 @@ newGame();
 // Click event to start game
 $('#button-start').on('click', function(){
     gameStart = false;
+    console.log(gameStart);
     newGame();
 })
 
@@ -115,9 +117,10 @@ $(nextQuestion).on('click', function(){
 
 // Click event to restart game
 $(restartGame).on('click', function(){
-    // gameStart = false;
+    gameStart = true;
     $(questionImage).remove();
     randomQuestion = 0;
+    $('#game-button').html(clickToStart);
     newGame();
 })
 
@@ -552,7 +555,7 @@ function triviaQuestions(){
             alert('Correct');
             $('#current-question').html(`<h3>Please click Next Question to proceed.</h3>`);
             $('#answer-choices').text('');
-            
+
             questionsArr.splice(0,1);
 
             $(questionImage).remove();
@@ -626,9 +629,7 @@ function triviaQuestions(){
         imageAnswer = 0;
         $('#current-image').append(questionImage);
 
-        gameStart = true;
-        $('#game-button').text('');
-        $('#game-button').append(restartGame);
+        $('#game-button').html(restartGame);
     }
 }
 
