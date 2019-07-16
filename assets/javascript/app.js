@@ -275,7 +275,7 @@ function triviaQuestions(){
     } else if(randomQuestion === 3){
         $('#current-question').text(questionFour);
         $(questionImage).remove();
-        $(questionImage).attr('src', 'assets/images/agumon.png');
+        $(questionImage).attr('src', 'assets/images/blue-eyes.jpeg');
         $('#current-image').append(questionImage);
 
         let answerOne = $('<button>');
@@ -323,7 +323,7 @@ function triviaQuestions(){
     } else if(randomQuestion === 4){
         $('#current-question').text(questionFive);
         $(questionImage).remove();
-        $(questionImage).attr('src', 'assets/images/agumon.png');
+        $(questionImage).attr('src', 'assets/images/avatar.png');
         $('#current-image').append(questionImage);
 
         let answerOne = $('<button>');
