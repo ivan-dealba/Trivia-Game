@@ -118,6 +118,8 @@ $(nextQuestion).on('click', function(){
 
 // Click event to restart game
 $(restartGame).on('click', function(){
+    // REVIEW LINE 122
+    $('#wins-losses').remove();
     gameStart = true;
     $(questionImage).remove();
     randomQuestion = 0;
