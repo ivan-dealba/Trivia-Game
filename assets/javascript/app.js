@@ -161,7 +161,7 @@ function triviaQuestions(){
     if(randomQuestion === 0){
         run();
 
-        $('#current-question').text(questionOne);
+        $('#current-question').html(`<h3>${questionOne}</h3>`);
         $(questionImage).attr('src', 'assets/images/gon.jpeg');
         $('#current-image').append(questionImage);
 
@@ -210,7 +210,7 @@ function triviaQuestions(){
     } else if(randomQuestion === 1){
         run();
 
-        $('#current-question').text(questionTwo);
+        $('#current-question').html(`<h3>${questionTwo}</h3>`);
         $(questionImage).remove();
         $(questionImage).attr('src', 'assets/images/agumon.png');
         $('#current-image').append(questionImage);
@@ -260,7 +260,7 @@ function triviaQuestions(){
     } else if(randomQuestion === 2){
         run();
 
-        $('#current-question').text(questionThree);
+        $('#current-question').html(`<h3>${questionThree}</h3>`);
         $(questionImage).remove();
         $(questionImage).attr('src', 'assets/images/naruto.jpeg');
         $('#current-image').append(questionImage);
@@ -310,7 +310,7 @@ function triviaQuestions(){
     } else if(randomQuestion === 3){
         run();
 
-        $('#current-question').text(questionFour);
+        $('#current-question').html(`<h3>${questionFour}</h3>`);
         $(questionImage).remove();
         $(questionImage).attr('src', 'assets/images/blue-eyes.jpeg');
         $('#current-image').append(questionImage);
@@ -360,7 +360,7 @@ function triviaQuestions(){
     } else if(randomQuestion === 4){
         run();
 
-        $('#current-question').text(questionFive);
+        $('#current-question').html(`<h3>${questionFive}</h3>`);
         $(questionImage).remove();
         $(questionImage).attr('src', 'assets/images/avatar.png');
         $('#current-image').append(questionImage);
