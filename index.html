@@ -5,7 +5,6 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Anime Trivia!</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <!-- <link rel='stylesheet' type='text/css' media='screen' href='assets/css/style.css'> -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel='stylesheet' type='text/css' media='screen' href='assets/css/style.css'>
     <link href="https://fonts.googleapis.com/css?family=Monoton&display=swap" rel="stylesheet">
@@ -16,12 +15,17 @@
             <h1>Anime Trivia!</h1>
         </div>
         <div id='main-content'>
+            <!--How much time is remaining for each question?-->
             <div id='time-remaining'></div>
+            <!--Unique image will be displayed for each individual question-->
+            <div id='current-image'></div>
             <div id='current-question'></div>
             <div id='answer-choices'></div>
             <div id='game-button'></div>
-            <div id='answer-reveal'>Show correct answer here</div>
-            <div id='answer-image'>Show image after correct answer is displayed</div>
+            <!--Show image after correct answer is displayed-->
+            <div id='answer-image'></div>
+            <!--Show correct answer here-->
+            <div id='answer-reveal'></div>
         </div>
 
     </section>

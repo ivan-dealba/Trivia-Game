@@ -13,6 +13,10 @@ let welcomeImage = $('<img>');
 welcomeImage.attr('src', 'assets/images/main-page.jpeg')
 welcomeImage.attr('id', 'welcome-image');
 
+// Image placeholder for questions
+let questionImage = $('<img>');
+questionImage.attr('id', 'question-image');
+
 // Button to proceed to next question
 let nextQuestion = $('<button>');
 nextQuestion.text('Next Question');
@@ -88,7 +92,9 @@ function newGame(){
     } else{
         // start questions
         // call function for executing trivia questions
+        $('#time-remaining').text("Time remaining:");
         $('#game-button').text('');
+        $('#welcome-image').remove();
         $('#game-button').append(nextQuestion);
         triviaQuestions();
     }
@@ -125,6 +131,8 @@ function triviaQuestions(){
 
     if(randomQuestion === 0){
         $('#current-question').text(questionOne);
+        $(questionImage).attr('src', 'assets/images/gon.jpeg');
+        $('#current-image').append(questionImage);
 
         let answerOne = $('<button>');
         let answerTwo = $('<button>');
