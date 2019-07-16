@@ -13,7 +13,12 @@ let nextQuestion = $('<button>');
 nextQuestion.text('Next Question');
 nextQuestion.css('padding', '20px');
 nextQuestion.css('margin', '20px');
-// nextQuestion.attr('id', 'button-next');
+
+// Button to restart game
+let restartGame = $('<button>');
+restartGame.text('Restart Game');
+restartGame.css('padding', '20px');
+restartGame.css('margin', '20px');
 
 // Counter
 var totalCorrect = 0;
@@ -28,7 +33,7 @@ const questionFive = "What is the name of the character in Avatar the Last Airbe
 
 // Array holding answer choices for their respect question
 // questionOne pertains to the object at index 0, questionTwo pertains to the object at index 1, and so on
-const questionsArr = [{
+let questionsArr = [{
     question: {
         correct: "Killua Zoldyck",
         wrongOne: "Hisoka Morow",
@@ -92,87 +97,256 @@ $('#button-start').on('click', function(){
 // Click event to proceed to next question
 $(nextQuestion).on('click', function(){
     $('#answer-choices').text('');
+    $('#current-question').text('');
     triviaQuestions();
 })
+
+// Click event to restart game
+$(restartGame).on('click', function(){
+    // gameStart = false;
+    newGame();
+})
+
+// Counter for current question
+let randomQuestion = 0;
 
 // Randomly choose a question and its answers to be displayed on the browser
 function triviaQuestions(){
 
-    // for(var i = 0; i < questionsArr.length; i++){
-        let randomQuestion = Math.floor(Math.random() * questionsArr.length);
-        // let randomQuestion = 0;
+    // let randomQuestion = Math.floor(Math.random() * questionsArr.length);
 
-        if(randomQuestion === 0){
-            $('#current-question').text(questionOne);
+    if(randomQuestion === 0){
+        $('#current-question').text(questionOne);
 
-            let answerOne = $('<button>');
-            let answerTwo = $('<button>');
-            let answerThree = $('<button>');
-            let answerFour = $('<button>');
+        let answerOne = $('<button>');
+        let answerTwo = $('<button>');
+        let answerThree = $('<button>');
+        let answerFour = $('<button>');
 
-            answerOne.text(questionsArr[0].question.correct);
-            answerTwo.text(questionsArr[0].question.wrongOne);
-            answerThree.text(questionsArr[0].question.wrongTwo);
-            answerFour.text(questionsArr[0].question.wrongThree);
+        answerOne.text(questionsArr[0].question.correct);
+        answerTwo.text(questionsArr[0].question.wrongOne);
+        answerThree.text(questionsArr[0].question.wrongTwo);
+        answerFour.text(questionsArr[0].question.wrongThree);
 
-            $('#answer-choices').append(answerOne, answerTwo, answerThree, answerFour);
+        $('#answer-choices').append(answerOne, answerTwo, answerThree, answerFour);
 
-        } else if(randomQuestion === 1){
-            $('#current-question').text(questionTwo);
+        randomQuestion++;
 
-            let answerOne = $('<button>');
-            let answerTwo = $('<button>');
-            let answerThree = $('<button>');
-            let answerFour = $('<button>');
+        $(answerOne).on('click', function(){
+            totalCorrect++;
+            alert('Correct');
+            $('#answer-choices').text('');
+            questionsArr.splice(0,1);
+        })
 
-            answerOne.text(questionsArr[1].question.correct);
-            answerTwo.text(questionsArr[1].question.wrongOne);
-            answerThree.text(questionsArr[1].question.wrongTwo);
-            answerFour.text(questionsArr[1].question.wrongThree);
+        $(answerTwo).on('click', function(){
+            totalWrong++;
+            alert('Wrong');
+            $('#answer-choices').text('');
+            questionsArr.splice(0,1);
+        })
 
-            $('#answer-choices').append(answerOne, answerTwo, answerThree, answerFour);
-        } else if(randomQuestion === 2){
-            $('#current-question').text(questionThree);
+        $(answerThree).on('click', function(){
+            totalWrong++;
+            alert('Wrong');
+            $('#answer-choices').text('');
+            questionsArr.splice(0,1);
+        })
 
-            let answerOne = $('<button>');
-            let answerTwo = $('<button>');
-            let answerThree = $('<button>');
-            let answerFour = $('<button>');
+        $(answerFour).on('click', function(){
+            totalWrong++;
+            alert('Wrong');
+            $('#answer-choices').text('');
+            questionsArr.splice(0,1);
+        })
 
-            answerOne.text(questionsArr[2].question.correct);
-            answerTwo.text(questionsArr[2].question.wrongOne);
-            answerThree.text(questionsArr[2].question.wrongTwo);
-            answerFour.text(questionsArr[2].question.wrongThree);
+    } else if(randomQuestion === 1){
+        $('#current-question').text(questionTwo);
 
-            $('#answer-choices').append(answerOne, answerTwo, answerThree, answerFour);
-        } else if(randomQuestion === 3){
-            $('#current-question').text(questionFour);
+        let answerOne = $('<button>');
+        let answerTwo = $('<button>');
+        let answerThree = $('<button>');
+        let answerFour = $('<button>');
 
-            let answerOne = $('<button>');
-            let answerTwo = $('<button>');
-            let answerThree = $('<button>');
-            let answerFour = $('<button>');
+        answerOne.text(questionsArr[0].question.correct);
+        answerTwo.text(questionsArr[0].question.wrongOne);
+        answerThree.text(questionsArr[0].question.wrongTwo);
+        answerFour.text(questionsArr[0].question.wrongThree);
 
-            answerOne.text(questionsArr[3].question.correct);
-            answerTwo.text(questionsArr[3].question.wrongOne);
-            answerThree.text(questionsArr[3].question.wrongTwo);
-            answerFour.text(questionsArr[3].question.wrongThree);
+        $('#answer-choices').append(answerOne, answerTwo, answerThree, answerFour);
 
-            $('#answer-choices').append(answerOne, answerTwo, answerThree, answerFour);
-        } else if(randomQuestion === 4){
-            $('#current-question').text(questionFive);
+        randomQuestion++;
 
-            let answerOne = $('<button>');
-            let answerTwo = $('<button>');
-            let answerThree = $('<button>');
-            let answerFour = $('<button>');
+        $(answerOne).on('click', function(){
+            totalCorrect++;
+            alert('Correct');
+            $('#answer-choices').text('');
+            questionsArr.splice(0,1);
+        })
 
-            answerOne.text(questionsArr[4].question.correct);
-            answerTwo.text(questionsArr[4].question.wrongOne);
-            answerThree.text(questionsArr[4].question.wrongTwo);
-            answerFour.text(questionsArr[4].question.wrongThree);
+        $(answerTwo).on('click', function(){
+            totalWrong++;
+            alert('Wrong');
+            $('#answer-choices').text('');
+            questionsArr.splice(0,1);
+        })
 
-            $('#answer-choices').append(answerOne, answerTwo, answerThree, answerFour);
-        }
-    // }
+        $(answerThree).on('click', function(){
+            totalWrong++;
+            alert('Wrong');
+            $('#answer-choices').text('');
+            questionsArr.splice(0,1);
+        })
+
+        $(answerFour).on('click', function(){
+            totalWrong++;
+            alert('Wrong');
+            $('#answer-choices').text('');
+            questionsArr.splice(0,1);
+        })
+
+    } else if(randomQuestion === 2){
+        $('#current-question').text(questionThree);
+
+        let answerOne = $('<button>');
+        let answerTwo = $('<button>');
+        let answerThree = $('<button>');
+        let answerFour = $('<button>');
+
+        answerOne.text(questionsArr[0].question.correct);
+        answerTwo.text(questionsArr[0].question.wrongOne);
+        answerThree.text(questionsArr[0].question.wrongTwo);
+        answerFour.text(questionsArr[0].question.wrongThree);
+
+        $('#answer-choices').append(answerOne, answerTwo, answerThree, answerFour);
+
+        randomQuestion++;
+
+        $(answerOne).on('click', function(){
+            totalCorrect++;
+            alert('Correct');
+            $('#answer-choices').text('');
+            questionsArr.splice(0,1);
+        })
+
+        $(answerTwo).on('click', function(){
+            totalWrong++;
+            alert('Wrong');
+            $('#answer-choices').text('');
+            questionsArr.splice(0,1);
+        })
+
+        $(answerThree).on('click', function(){
+            totalWrong++;
+            alert('Wrong');
+            $('#answer-choices').text('');
+            questionsArr.splice(0,1);
+        })
+
+        $(answerFour).on('click', function(){
+            totalWrong++;
+            alert('Wrong');
+            $('#answer-choices').text('');
+            questionsArr.splice(0,1);
+        })
+
+    } else if(randomQuestion === 3){
+        $('#current-question').text(questionFour);
+
+        let answerOne = $('<button>');
+        let answerTwo = $('<button>');
+        let answerThree = $('<button>');
+        let answerFour = $('<button>');
+
+        answerOne.text(questionsArr[0].question.correct);
+        answerTwo.text(questionsArr[0].question.wrongOne);
+        answerThree.text(questionsArr[0].question.wrongTwo);
+        answerFour.text(questionsArr[0].question.wrongThree);
+
+        $('#answer-choices').append(answerOne, answerTwo, answerThree, answerFour);
+
+        randomQuestion++;
+
+        $(answerOne).on('click', function(){
+            totalCorrect++;
+            alert('Correct');
+            $('#answer-choices').text('');
+            questionsArr.splice(0,1);
+        })
+
+        $(answerTwo).on('click', function(){
+            totalWrong++;
+            alert('Wrong');
+            $('#answer-choices').text('');
+            questionsArr.splice(0,1);
+        })
+
+        $(answerThree).on('click', function(){
+            totalWrong++;
+            alert('Wrong');
+            $('#answer-choices').text('');
+            questionsArr.splice(0,1);
+        })
+
+        $(answerFour).on('click', function(){
+            totalWrong++;
+            alert('Wrong');
+            $('#answer-choices').text('');
+            questionsArr.splice(0,1);
+        })
+
+    } else if(randomQuestion === 4){
+        $('#current-question').text(questionFive);
+
+        let answerOne = $('<button>');
+        let answerTwo = $('<button>');
+        let answerThree = $('<button>');
+        let answerFour = $('<button>');
+
+        answerOne.text(questionsArr[0].question.correct);
+        answerTwo.text(questionsArr[0].question.wrongOne);
+        answerThree.text(questionsArr[0].question.wrongTwo);
+        answerFour.text(questionsArr[0].question.wrongThree);
+
+        $('#answer-choices').append(answerOne, answerTwo, answerThree, answerFour);
+        randomQuestion++;
+
+        $(answerOne).on('click', function(){
+            totalCorrect++;
+            alert('Correct');
+            $('#answer-choices').text('');
+            questionsArr.splice(0,1);
+        })
+
+        $(answerTwo).on('click', function(){
+            totalWrong++;
+            alert('Wrong');
+            $('#answer-choices').text('');
+            questionsArr.splice(0,1);
+        })
+
+        $(answerThree).on('click', function(){
+            totalWrong++;
+            alert('Wrong');
+            $('#answer-choices').text('');
+            questionsArr.splice(0,1);
+        })
+
+        $(answerFour).on('click', function(){
+            totalWrong++;
+            alert('Wrong');
+            $('#answer-choices').text('');
+            questionsArr.splice(0,1);
+        })
+    } else if(randomQuestion === 5){
+        $('#main-content').append(`Total correct: ${totalCorrect}`);
+        $('#main-content').append('<br>');
+        $('#main-content').append(`Total wrong: ${totalWrong}`);
+
+        randomQuestion = 0;
+        gameStart = true;
+        $('#game-button').text('');
+        $('#game-button').append(restartGame);
+    }
 }
+
