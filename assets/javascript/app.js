@@ -29,6 +29,7 @@ let restartGame = $('<button>');
 restartGame.text('Restart Game');
 restartGame.css('padding', '20px');
 restartGame.css('margin', '20px');
+restartGame.attr('id', 'button-restart');
 
 // Counter
 var totalCorrect = 0;
