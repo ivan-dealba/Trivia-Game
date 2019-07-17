@@ -105,7 +105,6 @@ newGame();
 // Click event to start game
 $('#button-start').on('click', function(){
     gameStart = false;
-    console.log(gameStart);
     newGame();
 })
 
